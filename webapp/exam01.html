@@ -17,7 +17,7 @@
 	<script type="text/javascript">
 		/* 기본 자료형은 number, string, boolean 3가지 --> 첫 글자 대문자 아님.*/
 	
-	
+		console.log("자바스크립트 자료형 확인-------");	/* ""안에 쓰면 자료형보다는 글자 출력(물론 console탭) */
 		console.log(typeof 1);
 		console.log(typeof 1.5);
 		console.log(typeof '한');
@@ -26,8 +26,53 @@
 		console.log(typeof "안녕하세요");
 		console.log(typeof (6>5));
 		console.log(typeof (6<5));
-		
 	</script>
 
+
+	<script type="text/javascript">
+		console.log("자바스크립트 숫자형(number)확인------");
+		console.log(13+5);
+		console.log(13-5);
+		console.log(13*5);
+		console.log(13/5);
+		console.log(13%5); //나머지
+		
+		console.log(13+5.2);	//정수+실수 가능
+		
+		console.log(5+3*2);		//연산자 우선순위
+		console.log((5+3)*2);
+		
+	</script>
+	
+	
+	
+	<script type="text/javascript">
+		console.log("자바스크립트 문자형(string)확인------");
+		console.log("동해물과 백두산이");	//""   '' 차이 --> 차이 없음
+		console.log('동해물과 백두산이');
+		
+		console.log("동해물과 '백두산'이");	//""안에 ''있으면 구별됨 --> ""안에 있는거 통째로 문자로 인식하나봄
+		console.log('동해물과 "백두산"이');	//반대 경우 마찬가지. 결국 섞어쓰기 해야함.
+		
+		console.log("동해물과 \"백두산\"이");
+		console.log('동해물과 \'백두산\'이');
+		
+		console.log("동해물과 \n백두산이");	// \n 다음칸-> println
+		console.log("동해물과 \t백두산이"); // \t  tap
+		
+		console.log("동해물과" + 1234 +  "백두산이");	//문자열끼리 더하기 
+		
+		var no = 123456;	//변수선언 이렇게 하는건가봄
+		console.log("동해물과" + no +  "백두산이");		//자바랑 비슷하네
+	</script>
+	
+	
+	<script type="text/javascript">
+		console.log("자바스크립트 boolean형 확인------");
+		console.log(52 > 273);	//false
+		console.log(52 < 273);	//true
+	</script>
+	
+	
 
 </html>
