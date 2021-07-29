@@ -2,25 +2,72 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
 <body>
+
+
+	<h1>자바스크립트</h1>
+	<h2>변수선언</h2>
 	
-	<ul>
-		<li> 순서1 순서1 순서1 순서1 순서1 </li>
-		<li> 순서2 순서2 순서2 순서2 순서2 </li>
-		<li> 순서3 순서3 순서3 순서3 순서3 </li>
-		<li> 순서4 순서4 순서4 순서4 순서4 </li>
-	</ul>
-	
-	<p> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </p>
-	<p> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </p>
-	<p> 텍스트3 텍스트3 텍스트3 텍스트3 텍스트3 </p>
-	<p> 텍스트4 텍스트4 텍스트4 텍스트4 텍스트4 </p>
+	<p>개발자모드 console 탭에서 확인</p>
 
 </body>
+	
+	<script type="text/javascript">
+		//변수 선언법
+		//자료형을 쓰지 않는다.
+		console.log("변수 선언법======")
+		var no;	//no는 변수이름	number num;	이런식으로는 안됨	
+		var str;	//str은 변수이름. 마찬가지로 String str 안됨
+		var boo;	//boolean boo 안됨
+	</script>
 
 
+	<script type="text/javascript">
+		//같은 이름의 변수 선언이 된다.
+		var name = "정우성";	//같은거 써도 오류 안남	-> 위에 쓴건 묻힌다. 그니깐 변수명 잘 줘라
+		var name = "유재석";
+		var name = "이효리";
+		console.log(name);	//위에 쓴건 묻힘. 
+		
+		var person = "정우성";
+		person = "유재석";
+		console.log(person);
+	</script>
+	
+	
+	<script type="text/javascript">
+		//자료형은 대입 할때 결정된다.	-> 같은 변수에 자료형은 입력한 값에 따라 바뀐다.
+		var data;
+		console.log(typeof data);	//undefined	-> 자료형이 결정되지 않은 상태
+		
+		data=15;
+		console.log(typeof data);	//number
+		
+		data="안녕";
+		console.log(typeof data);	//string로 바뀜
+		
+		data = 3<5;
+		console.log(typeof data);	//boolean로 바뀜
+	</script>
+	
+	<script type="text/javascript">
+		//undefined, null 비교
+		var myVar01;
+		var myVar02 = null;
+		
+		console.log(myVar01);	//undefined -> 자료형 결정되지 않은 상태(변순 선언은 되었지만 값이 없는 경우)
+		console.log(myVar02);	//null -> 아무런 값도 나타내지 않는 특수한 값.(변수 선언하고 null이라는 빈 값을 할당한 경우에 나옴)
+	</script>
+	
+	
+	<script type="text/javascript">
+		//동등(==), 일치(===) 연산자 비교
+		console.log(123==123);	//true
+		console.log("123"==123);	//자바는 false 여긴 true -> 자료형을 같은걸로 변환한 후에 비교하는듯.(좀 느슨하게 비교)
+		console.log("123"===123);	//false -> 자료형까지 싹 다 비교함. (엄격함)
+	
+	</script>
 </html>
