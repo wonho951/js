@@ -14,12 +14,17 @@
 		var guestbookVo = {		//객체는 {} 이걸로 만듦. [] 이건 배열.	name는 필드 "최원호"는 값. 여긴 = 사용 안하고 : 사용함.
 				name : "최원호", 
 				password : "1234",
-				content : "안니영"
+				content : "안니영",
+				
+				showInfo : function(){
+								console.log(this.name + ", " +  this.password + ", " + this.content)
+						   }	//줄 맞춰주는게 가독성 좋다.
 		};	
 		
 		console.log(guestbookVo.name);	//이건 자바랑 비슷 -> name값을 꺼내옴
 		console.log(guestbookVo.password);
 		console.log(guestbookVo.content);
+		console.log(guestbookVo.showInfo());
 	</script>
 
 
