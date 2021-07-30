@@ -7,18 +7,22 @@
 </head>
 
 <body>
-	<h1>while문 예제</h1>
+	<h1>for문 예제 (구구단)</h1>
+	
+	2*1=2 &nbsp;&nbsp;&nbsp;&nbsp; 2*2=4<br>	<!-- &nbsp는 tap같음 -->
+	2*1=2 &nbsp;&nbsp;&nbsp;&nbsp; 2*2=4<br>
 	
 	
 	<script type="text/javascript">
 		
-		for(var dan = 2; i <= 9; dan++) {
+		for(var dan = 2; dan <= 9; dan++) {
 			
-			document.write(dan);
+			
 			for(var i = 1; i <= 9; i++){
-			
-				document.write(i);
+				
+				document.write(dan + "*" + i + "=" + dan*i + "&nbsp;&nbsp;&nbsp;&nbsp;");
 			}
+			document.write("<br>");
 		}
 		
 	</script>
