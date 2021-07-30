@@ -2,21 +2,53 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
 
 <body>
 
-	<ul>
-		<li>첫번째 아이템입니다.</li>
-		<li>두번째 아이템입니다.</li>
-		<li class="del">삭제할  아이템입니다.</li>
-		<li>네번째 아이템입니다.</li>
-		<li class="del">삭제할  아이템입니다.</li>
-		<li>다섯 번째 아이템입니다.</li>
-	</ul>
+	<h1>함수</h1>
+	
+	<script type="text/javascript">
+		//이름이 있는 함수(기명함수, 선언적 함수)
+		
+		
+		/*	실험. 위에 말고 밑에 놔보기
+		//함수 정의 하는법	->  메소드 정의하는거랑 비슷한가?
+		function plus(a, b) {	// 변수명 딱히 선언 안하고 받고싶은 값을 어디에 넣을지만 정해줌;; 헷갈리네
+			var sum = a + b;
+		
+			return sum;
+		}	*/
+		
+		//함수 실행
+		var plusSum = plus(3, 5);
+		console.log(plusSum);
+		
+		//document.write("<h1>" + plusSum + "</h1>");	-> 이렇게 사용안함
+	
+		
+		var result01 = plus(2.7, 5.8);
+		console.log(result01);
+		
+		
+		var result02 = plus("안녕", "하세요");	//이게 됨;; 어떻게 생각하면 좀 편할거같긴한데 일단은 헷갈림
+		console.log(result02);
+		
+		
+		
+		//함수 밑에 정의하기 -> 위에 함수 먼저 실행시켜놓고 밑에 선언하면 어케됨?	-> 그래도 잘만 됨. 위에 있든 아래있든 결과적으로는 됨. 헷갈리네
+		//결론: *************함수 정의부터 해석된다.--> 익명함수는 다르다!!!!@!@!@!@!@!@!@!@!@!@
+		function plus(a, b) {	// 변수명 딱히 선언 안하고 받고싶은 값을 어디에 넣을지만 정해줌;; 헷갈리네
+			var sum = a + b;
+		
+			return sum;
+		}
+		
+		
+		
+	</script>
 
 </body>
 	
