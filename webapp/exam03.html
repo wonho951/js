@@ -2,22 +2,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
 <body>
+	<!--자바와 자바 스크립트는 동작 시점이 다르다. 2021.07.30 강의 다시 보기(기억 안나면) -->
 	
+	<h1>if문 예제</h1>
 	
-	<ul>
-		<li id="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
-		<li id="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
-		<li id="third"> 텍스트3 텍스트3 텍스트3 텍스트3 텍스트3 </li>
-		<li id="fourth"> 텍스트4 텍스트4 텍스트4 텍스트4 텍스트4 </li>
-		<li id="first"> 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 텍스트1-1 </li>
-	</ul>
+	<script type="text/javascript">
+		var num = prompt();		//잘 쓰진 않지만 ctrl+f같은 기능 바로 띄워버림
+		
+		if(num >= 60){
+			console.log("합격입니다.")
+			document.write("<strong>합격입니다.</strong>")	//document.write -> 화면에 출력해주는 기능
+		} else {
+			console.log("불합격입니다.")
+			document.write("불합격입니다.")
+		}
+	</script>
 
 
+	
 </body>
 	
 	
