@@ -37,15 +37,50 @@
 		console.log(student2);
 		
 		
-		guestbookVo.name();	//()는 실행이라는 뜻. -> 실행시키면 실행안됨. -> 함수가 아니기때문에.
+		//guestbookVo.name();	//()는 실행이라는 뜻. -> 실행시키면 실행안됨. -> 함수가 아니기때문에.
 		
 		
+		console.log("========================");
+		
+		var person01 = {
+				name : "최원호",
+				hp : "010-2222-2222",
+				company : "02-2222-2222"
+		}
+		
+		var person02 = {
+				name : "정우성",
+				hp : "010-3333-3333",
+				company : "02-3333-3333"
+		}
+		
+		var person03 = {
+				name : "이효리",
+				hp : "010-5555-5555",
+				company : "02-5555-5555"
+		}
 		
 		
+		//var personList = [person01, person02, person03];	//이미 정의 되어있기 때문에 바로 넣어도 됨.
+		//console.log(personList);
+		
+		var personList2 = [];
+		personList2[0] = person01;
+		personList2[1] = person02;
+		
+		personList2.push(person03);	//배열 마지막에 추가하는거 -> 실질적으로 많이 사용함.
+		
+		console.log(personList2);
+		
+		//personList2.pop();	//마지막꺼 빼는거
+		//console.log(personList2);
 		
 		
-		
-		
+		//int 아니다 var이다 외워라
+		for(var i = 0; i < personList2.length; i++){
+			console.log(personList2[i].name);
+			console.log(personList2[i].hp);
+		}
 		
 	</script>
 
