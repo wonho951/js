@@ -24,7 +24,29 @@
 		console.log(guestbookVo.name);	//이건 자바랑 비슷 -> name값을 꺼내옴
 		console.log(guestbookVo.password);
 		console.log(guestbookVo.content);
-		console.log(guestbookVo.showInfo());
+		guestbookVo.showInfo();	//바로 실행. 기능 안에 console.log가 있으니까 console.log에 담아서 출려갛 필요가 없음. 
+		
+		
+		
+		/*name password content값을 다른데 담아봄*/
+		var student = guestbookVo.name;
+		console.log(student);
+		
+		//위와는 다른 표현 - 잘 사용 안함.
+		var student2 = guestbookVo["name"];
+		console.log(student2);
+		
+		
+		guestbookVo.name();	//()는 실행이라는 뜻. -> 실행시키면 실행안됨. -> 함수가 아니기때문에.
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	</script>
 
 
