@@ -2,14 +2,31 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
 
 <body>
-	<p id="p1"> abcdefghijklmn </p>
-	<p id="p2"> 학교종이 땡땡땡 abcdefg </p>
+	<h1>while문 예제</h1>
+	
+	
+	<script type="text/javascript">
+		
+		var num = 1;	//변수 선언시 var로 함. number로 하면 오류남
+		
+		while (true){
+			
+			if((num % 6 == 0) && (num % 14 == 0)){
+				console.log(num);
+				document.write(num);
+				break;
+			}
+			
+			//처음에는 만족 못하니까 +1씩 올려줌.
+			num = num +1
+		}
+	
+	</script>
 </body>
 	
 
