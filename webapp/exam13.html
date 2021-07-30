@@ -2,17 +2,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
-	<div>
-		<input id="btn" type="button" VALUE="js테스트버튼" />
-		<h1 id="display">이름출력영역</h1>
-	</div>
+	
+		<h1>객체</h1>
 
 </body>
 
+	<script type="text/javascript">
+		var guestbookVo = {		//객체는 {} 이걸로 만듦. [] 이건 배열.	name는 필드 "최원호"는 값. 여긴 = 사용 안하고 : 사용함.
+				name : "최원호", 
+				password : "1234",
+				content : "안니영"
+		};	
+		
+		console.log(guestbookVo.name);	//이건 자바랑 비슷 -> name값을 꺼내옴
+		console.log(guestbookVo.password);
+		console.log(guestbookVo.content);
+	</script>
 
 
 </html>
