@@ -9,20 +9,37 @@
 
 <body>
 
-	<h1>변수의 번위</h1>
+	<h1>변수의 범위</h1>
 	
 	<script type="text/javascript">
-		
+	
+		/*	첫번째
 		var name = "global";
 	
 		function checkscope(){
-			name = "local";
+			var name = "local";	//괄호 안에서만 살아있는 '지역변수'
 			console.log(name);
 		}
 		
 		checkscope();	//local
 		
 		console.log(name);	//global
+		*/
+		
+		/***********두번째 실험**************/		
+		var name = "global";	//전역변수
+		
+		function checkscope(){
+			name = "local";
+			name2 = "로컬";	//var 사용 안하고 써도 이 밑으로는 전역변수처럼 사용할 수 있다. 하지만 변수 선언 할때는 var 사용 권장한다.
+			console.log(name);
+		}
+		
+		checkscope();	//local
+		
+		console.log(name);	//local
+		console.log(name2);	//local
+		
 		
 	</script>
 </body>
