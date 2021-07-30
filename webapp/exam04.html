@@ -14,8 +14,9 @@
 		var num = prompt();
 		console.log(typeof num);	// 프롬프트에 들어가는건 string인걸 확인 할 수 있음.
 		
+		/* num = parseInt(num);	--> string형은 num을 int형으로 형변환 해줌. 자바랑 이름 비슷 */
 		
-		if(num === 0){	//==로 비교했을땐 느슨하기 때문에 결과값 출력되지만 ===은 엄격해서 출력이 안됨.(자료형이 다르기 땜시)
+		if(parseInt(num) === 0){	//==로 비교했을땐 느슨하기 때문에 결과값 출력되지만 ===은 엄격해서 출력이 안됨.(자료형이 다르기 땜시). 출력 되게 하려면 "0" 이케 해줌. 아니면 num의 자료형을 변경해줌.
 			console.log("0점입니다.");
 			document.write("0점입니다.")
 		}
