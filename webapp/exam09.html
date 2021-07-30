@@ -11,7 +11,7 @@
 	<h1>함수</h1>
 	
 	<script type="text/javascript">
-		//이름이 있는 함수(기명함수, 선언적 함수)
+		//이름이 있는 함수(기명함수, 선언적 함수)*************함수 정의부터 해석된다.--> 익명함수는 다르다!!!!@!@!@!@!@!@!@!@!@!@
 		
 		
 		/*	실험. 위에 말고 밑에 놔보기
@@ -47,6 +47,37 @@
 		}
 		
 		
+		
+		
+		
+		
+		//이름이 없는 함수(익명함수) -> 함수를 만드는데 이름 안지어줌
+		//이름이 없어서 바로 사용해야함. -> 변수에 넣어놔야함. 어렵네		--> 재사용을 위해서 변수에 할당해서 사용
+		//													--> 변수는 위에서부터 실행된다.
+		var minus = function (a, b){
+			var sum = a - b;
+			return sum;
+		}
+		
+		console.log(typeof minus);
+		
+		var myVar = "안녕하세요";	// -> 죄다 담을 수 있음. 객체도 가능 배열도 가능. 
+		
+		
+		var result03 = minus(5, 4);
+		console.log(result03);		
+		
+		var result04 = minus(5, 2.4);
+		console.log(result04);
+		
+		var result05 = minus("안녕", "하세요");	//문자열은 마이너스 할 수 없음
+		console.log(result05);
+		
+		/* 익명 함수는 밑에 사용 불가능하다 ㅇㅋ?
+		var minus = function(a, b){
+			var sum = a - b;
+			return sum;
+		}*/
 		
 	</script>
 
