@@ -19,6 +19,11 @@
 			if((num % 6 == 0) && (num % 14 == 0)){
 				console.log(num);
 				document.write(num);
+				
+				
+				//여긴 그냥 문법 -> 실제로 이렇게 짜면 안좋음.
+				document.write("안녕<br>하세요");	//<br>태그 써줘야함.\n 이런거 안먹힘. --> 여긴 html이기 때문에 태그 써야됨.
+				console.log("안녕\n하세요");	//여기는 html이 아니기때문에 먹힘 --> 개발자용. 콘솔에 찍어보는거기때문에	
 				break;
 			}
 			
