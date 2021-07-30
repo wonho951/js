@@ -65,9 +65,29 @@
 	
 	<script type="text/javascript">
 		//동등(==), 일치(===) 연산자 비교
-		console.log(123==123);	//true
-		console.log("123"==123);	//자바는 false 여긴 true -> 자료형을 같은걸로 변환한 후에 비교하는듯.(좀 느슨하게 비교)
-		console.log("123"===123);	//false -> 자료형까지 싹 다 비교함. (엄격함)
-	
+		console.log(123 == 123);	//true
+		console.log(123 === 123);	//true
+		console.log("123" == 123);	//자바는 false 여긴 true -> 자료형을 같은걸로 변환한 후에 비교하는듯.(좀 느슨하게 비교)
+		console.log("123" === 123);	//false -> 자료형까지 싹 다 비교함. (엄격함)
+
+		
+		var myVar03;	//값이 undefined
+		var myVar04 = null;	//값이 null
+		
+		console.log(myVar03 == myVar04);	//느슨한경우 true
+		console.log(myVar03 === myVar04);	//엄격한경우 false 
+		
+		console.log('' == 0);	//느슨한경우 true	--> ''비어있어서 0이랑 같다고 하는것같다.
+		console.log('' === 0);	//엄격한경우 false
+		
+		
+		console.log("===========")
+		console.log('' == 0);		//true 0 false '' 세개가 true로 나옴.
+		console.log('' == false);	//true -> 0대신 false로 넣어도 되는듯. 0을 false로 생각하나봄
+		console.log(0 == false);	//true
+		
+		
+		
+		
 	</script>
 </html>
