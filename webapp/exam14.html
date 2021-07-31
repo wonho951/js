@@ -2,21 +2,109 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+
+
+
 <title>Insert title here</title>
 </head>
 <body>
-	
-	<ul>
-		<li id="first" class="red">첫번째 아이템입니다.</li>
-		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
-		<li id="third" class="del">세번째아이템입니다.</li>
-		<li><strong>네번째 아이템입니다.</strong></li>
+
+		<!-- js에서 의미 
+		세개를 분리해서 사용하려고 하는게 목적
+		m = data  	-> html태그
+		v = view  	-> css
+		c = control	-> js(자바스크립트)
 		
-	</ul>
+		java에서 의미
+		m = data  	-> model
+		v = view  	-> jsp
+		c = control	-> controller
+		 -->
+		
+		
+	<h1>이벤트</h1>
+	
+	<h2>h2태그_1</h2>
+	<h2>h2태그_2</h2>
+	<h2>h2태그_3</h2>
+		
+	<h3 class="tagh3">h3태그_1</h3>
+	<h3 class="tagh3">h3태그_2</h3>
+	<h3 class="tagh3">네이버</h3>
+	<h3 class="tagh3">다음</h3>
+		
+		
+	<div>
+		<button id="btn">자바 스크립트 테스트 버튼</button>
+		<p id = "display">이름 출력 영역</p>
+	</div>
 
 </body>
 
+	<!-- 
+	<script type="text/javascript">
+		//문서의 모든 요소가 로딩된 후에 function()의 내용이 실행되어라.
+		window.onload = function(){	// window.onload -> 창이 열렸을때 말하는거임.
+			var testButton = document.getElementById("btn");	//태그도 넣어야 제어 할수 있음.
+			var testArea = document.getElementById("display");
+				
+			console.log(testButton);
+			console.log(testArea);
+			
+			//id가 "btn"인 버튼을 클릭할때 function()에 정의된대로 작동해라
+			testButton.onclick = function(){	//버튼을 클릭할때 뭔가 실행함.
+			testArea.innerHTML = "<font color='red'>홍길동<font>";	//innerHTML -> html의 글자에 접근하는거.	
+				};
+		};
+	</script>
+	 -->
+
+	
+	<script type="text/javascript">
+		window.onload = function() {
+			//id로 가져오기
+			var testButton = document.getElementById("btn");	//id명은 한개만 존재하기 때문에 Element이다.
+			var testArea = document.getElementById("display");
+			
+			//html 태그로 가져오기
+			//h2태그 한번에 제어하기(한번에 변수에 담기)
+			var h2Array = document.getElementsByTagName("h2");	//h2는 한번에 여러개가 있기 때문에 Elements를 사용한다.
+			console.log(h2Array);
+		
+			
+			
+			//클래스로 가져오기
+			var h3Array = document.getElementsByClassName("tagh3");
+			console.log(h3Array);
+		
+		testButton.onclick = function(){	// onclick때문에 js여도 위에 놔도 작동 안함.
+				testArea.innerHTML = "홍길동";
+			};
+
+			
+		//h2태그의 두번째를 클릭할때 function()에 정의된대로 작동해라
+		console.log(h2Array[1]);
+		h2Array[1].onclick = function() {
+			testArea.innerHTML = "정우성";
+			
+		} 
+		
+		
+		//문제 : h3태그(다음)을 클릭하면 h1태그에 다음(daum.net)주소를 출력한다
+		//h1태그를 변수에 담는다.
+		var h1tag = document.getElementsByTagName("h1");
+		console.log(h1tag);
+		//h3태그(다음)에 click이벤트 정의
+		h3Array[3].onclick = function() {
+			h1tag[0].innerHTML = '<a href="http://www.daum.net" target="_blanck">https://daum.net';	//"" '' 사용해서 구분.
+		};
+		
+		
+		
+		
+		
+		};
+	</script>
 
 
 </html>
