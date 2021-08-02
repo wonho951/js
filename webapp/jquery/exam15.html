@@ -27,8 +27,9 @@
 			$("ul").append("<li id = 'seven'>일곱번째 아이템입니다.</li>");
 		});
 		
+		
 		/*
-		안되는경우
+		안되는경우 -> li에 이벤트를 걸어버리면 append로 나중에 추가된 애들은 인식하지 못하기때문에 li말고 밑에 있는 ul에 이벤트 걸어야된다.
 		$("li").on("click", function(){	//append로 추가된 애들은 인식하지 못함. 그래서 그렇게 만들어야됨. -> (공통이되는 부모한테 이벤트를 잡아버린다.)
 			console.log("li태그 클릭")	
 			var $this = $(this);
@@ -37,11 +38,12 @@
 		*/
 		
 		//공통이되는 부모한테 이벤트 잡고 그 밑에 자식한테 일시킨다.
-		$("ul").on("click", "li", function(){ //부모인 ul밑에 li한테 시켜라.
+		$("ul").on("click", "li", function(){ //부모인 ul밑에 li한테 시켜라. ul태그를 클릭하면 li태그에게 시킨다(위임)
 			console.log("li 클릭")	//사실 ul누른거임
 			var $this = $(this);
 			console.log($this);
 			
+			$(this).text("최원호");
 			
 		});
 		
