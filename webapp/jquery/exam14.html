@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -14,9 +14,35 @@
 		<li><strong>네번째 아이템입니다.</strong></li>
 		
 	</ul>
-
+	<p>aslkfuasdklasdjk</p>
 </body>
 
+	<script type="text/javascript">
+	
+		/* 
+		//무식한 방법. -> 갯수가 많아질수록 힘들어짐.
+		$("#first").on("click", function(){
+			console.log("id = first, 버튼 클릭");
+		});
+		
+		
+		$("#second").on("click", function(){
+			console.log("id = second, 버튼 클릭");
+		});
+		*/
+		
+		$("li").on("click", function(){
+			console.log("li 버튼클릭");
+			
+			var tag = $(this);	//li중 클릭한 부분만 인식함 -> 위에 p태그는 인식하지 못함
+			console.log(tag);
+			
+			$("li").html("최원호");
+		});
+		
+		
+	
+	</script>
 
 
 </html>

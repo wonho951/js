@@ -2,17 +2,33 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
 	<div>
-		<input id="btn" type="button" VALUE="js테스트버튼" />
+		<button id="btn" type="button" VALUE="" />js테스트버튼</button>
 		<h1 id="display">이름출력영역</h1>
 	</div>
 
 </body>
 
+
+	<script type="text/javascript">
+		
+		//이벤트 사용할때 on 사용
+		//btn 버튼을 클릭했을때 -> ~~했을때 이런게 이벤트임.
+		$("#btn").on("click", function(){	//dblclick -> 더블클릭
+			//항상 이거 먼저 찍어보고 확인.
+			console.log("버튼 클릭")
+				
+			$("#display").html("홍길동");	//글씨만 바꾸고 싶을때
+			$("#display").css("color", "red");	//색깔 바꿀때
+			$("#display").prepend("의적 ");	//앞에 붙일때
+			$("#display").append(" 이다.");
+		});
+	
+	</script>
 
 
 </html>
