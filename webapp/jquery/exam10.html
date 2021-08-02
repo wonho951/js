@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
+
 
 <title>Insert title here</title>
 </head>
@@ -19,5 +20,10 @@
 
 </body>
 	
+	<script type="text/javascript">
+		//객체조작 -> empty -> 태그는 삭제 되지 않고 그 하위의 텍스트만 사라짐.(선택자로 지정된 태그의 하위의 텍스트와 태그들을 제거한다.)
+		$(".del").empty();
+		//$(".del").text("");	empty와 같은 효과를 낼 수 있음.
+	</script>
 
 </html>

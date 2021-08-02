@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -10,7 +10,32 @@
 <body>
 	<p id="p1"> abcdefghijklmn </p>
 	<p id="p2"> 학교종이 땡땡땡 abcdefg </p>
+	<p id="p3"> 학교종이 땡땡땡 <strong>abcdefg</strong> </p>
 </body>
+
+	<script type="text/javascript">
+		//아이디 가져올땐 # 사용
+		//$("#p1").text("가나다라마바사");
+		
+		
+		//p1의 값을 읽고싶을때 -> 공백도 읽음.
+		//text()에 값을 넣어주면 값을 넣고 비워두면 값을 읽음.
+		//var str = $("#p1").text();
+		//console.log(str);
+		
+		//값을 비우고 싶을때
+		//$("#p1").text("");	//-> 이렇게 해야함. ()아님
+		
+		
+		//text는 태그 인식 못하고 다 텍스트로 인식함.
+		$("#p2").text("가나다라 <h2>마바사</h2>");
+		
+		
+		//텍스트를 읽어와라 -> 읽을때는 태그는 버리고 텍스트만 읽어옴
+		var str = $("#p3").text();
+		console.log(str);
+		
+	</script>
 	
 
 </html>

@@ -2,15 +2,28 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
 
 <body>
 	<p id="p1"> abcdefghijklmn </p>
-	<p id="p2"> 학교종이 땡땡땡<br /> abcdefg </p>
+	<p id="p2"> 학교종이 땡땡땡<br> abcdefg </p>
 </body>
 	
+	
+	<script type="text/javascript">
+		
+		//태그 포함해서 표현하고 싶음.	-> .html사용
+		$("#p1").html("<strong>가나다라</strong>마바사아자차카타파하");
+		
+		//$("#p1").text("<strong>가나다라</strong>마바사아자차카타파하");	--> 텍스트는 태그 포함 안함
+	
+		//읽어올때	-> 텍스트랑 다르게 태그까지 다읽어옴.
+		//var str = $("#p2").text();
+		var str = $("#p2").html();
+		console.log(str);
+	</script>
 
 </html>

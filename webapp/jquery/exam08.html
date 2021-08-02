@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -11,6 +11,20 @@
 	<p id="p1">마바사아자차카타파하</p>
 	<p id="p2">마바사아자차카타파하</p>
 </body>
+
+
+	<script type="text/javascript">
+		//기존에 있는거에 앞에 값을 넣을때	-> prepend
+		$("#p1").prepend("가나다라");
 	
+		//얘는 html로 인식함. 
+		$("#p1").prepend("<strong>가나다</strong>라");
+	
+		
+		//기존에 있는 값 뒤에 값을 넣을때 -> append
+		$("#p2").append("abcdefg");
+		
+		$("#p2").append("<strong>가나다</strong>라");
+	</script>
 
 </html>
