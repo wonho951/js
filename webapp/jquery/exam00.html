@@ -2,22 +2,25 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 
-<!-- 여기에 두면 위에서부터 순서대로인데 정의되지 않은 애들이 있기때문에 개발자 모드로 보면 에러남
+<!--  여기에 두면 위에서부터 순서대로인데 정의되지 않은 애들이 있기때문에 개발자 모드로 보면 에러남 
 	
 	<script type="text/javascript">
-		var testButton = document.getElementById("btn");
-		//console.log(testButton);
-		var testArea = document.getElementById("display")
-		console.log(testArea);
+		window.onload = function(){	// -> 윈도우가 다 로딩되면 작동하라는 뜻.
 		
-		//버튼을 클릭할때(이벤트)
-		testButton.onclick = function(){
-			//console.log("버튼 클릭");	//sysout 찍어서 확인하는 것처럼 확인할것. 
-			testArea.innerHTML= "<h2>홍길동</h2>";
-		};
+			var testButton = document.getElementById("btn");
+			//console.log(testButton);
+			var testArea = document.getElementById("display")
+			console.log(testArea);
+			
+			//버튼을 클릭할때(이벤트)
+			testButton.onclick = function(){
+				//console.log("버튼 클릭");	//sysout 찍어서 확인하는 것처럼 확인할것. 
+				testArea.innerHTML= "<h2>홍길동</h2>";
+			};
+		};		
 	</script> 
 -->
 
@@ -32,8 +35,11 @@
 	</div>
 
 </body>
+
 	
 	<script type="text/javascript">
+	
+		/*
 		var testButton = document.getElementById("btn");
 		//console.log(testButton);
 		var testArea = document.getElementById("display")
@@ -44,7 +50,42 @@
 			//console.log("버튼 클릭");	//sysout 찍어서 확인하는 것처럼 확인할것. 
 			testArea.innerHTML= "<h2>홍길동</h2>";
 		};
+		*/	
+		
+		
+		$("#btn").on("click", function(){//$, # java에서 사용하던 것처럼 id값 바로 불러옴. Element사용 안해도 됨.
+					//1번째(click) 할때, 2번째 일(function)을 해라.
+			/*		
+			console.log("jquery 버튼 클릭");
+			var test = $("#display");
+			console.log(test);
+			test.html("홍길동");//inner대신 정의되어있는 html사용. html상에서 글로 바꿔줌. -> innerHTML대신 사용
+			*/
+			
+			$("#display").html("홍길동");	// -> 위에꺼 줄여서 이렇게 사용 가능.
+					
+		});	
+					
+		
+		function on(a, b){
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	</script> 
-
+ 
 
 </html>
