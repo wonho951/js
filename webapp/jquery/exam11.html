@@ -17,7 +17,7 @@
 <body>
 
 	<ul>
-		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="first" class="red del">첫번째 아이템입니다.</li>
 		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
 		<li id="third" class="del">세번째아이템입니다.</li>
 		<li><strong>네번째 아이템입니다.</strong></li>
@@ -26,5 +26,14 @@
 
 </body>
 	
+	<script type="text/javascript">
+		//기존에 있는 클래스를 지워버림 -> removeClass
+		$("#first").removeClass("red");	//클래스 지우고 기본값으로 만듦. -> del은 남는다.
+	
+		//선택자로 지정된 태그에 클래스가 추가됨. -> addClass
+		$("#first").addClass("blue");
+		
+		
+	</script>
 
 </html>

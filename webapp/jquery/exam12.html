@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
 <style>
 	.red {color: red;}
 	
@@ -26,5 +26,36 @@
 	
 </body>
 	
+	
+	<script type="text/javascript">
+		//form에서 비어있는 곳에 값을 입력	
+		//var tag = $("[name='name']");
+		//console.log(tag) -> 일단 확인용으로 찍어봄
+		
+		//form에서 비어있는 곳에 값을 입력
+		$("[name='name']").val("최원호");
+		$("[name='password']").val("123");
+		$("[name='content']").val("학교종이 땡땡땡");
+		
+		//값 읽어오기 -> .val() -> () 비워주면됨.
+		var name2 = $("[name='name2']").val();
+		console.log(name2);
+		
+		var password2 = $("[name='password2']").val();
+		console.log(password2);
+		
+		var content2 = $("[name='content2']").val();
+		console.log(content2);
+		
+		
+		//값을 묶어서 보내야할때
+		var guestbookVo = {		//객체안에서는 = 아니고 : 이거다. 까먹지 말자
+			name : name2,		//name :$("[name='name']").val("최원호");
+			password : password2,//password: $("[name='password']").val("123");
+			content : content2	//content: $("[name='content']").val("학교종이 땡땡땡");
+		};
+
+		console.log(guestbookVo);
+	</script>
 
 </html>
