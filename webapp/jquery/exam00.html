@@ -4,26 +4,47 @@
 <meta charset="UTF-8">
 
 <title>Insert title here</title>
+
+<!-- 여기에 두면 위에서부터 순서대로인데 정의되지 않은 애들이 있기때문에 개발자 모드로 보면 에러남
+	
+	<script type="text/javascript">
+		var testButton = document.getElementById("btn");
+		//console.log(testButton);
+		var testArea = document.getElementById("display")
+		console.log(testArea);
+		
+		//버튼을 클릭할때(이벤트)
+		testButton.onclick = function(){
+			//console.log("버튼 클릭");	//sysout 찍어서 확인하는 것처럼 확인할것. 
+			testArea.innerHTML= "<h2>홍길동</h2>";
+		};
+	</script> 
+-->
+
+
 </head>
 <body>
 	
 
-	<ul>
-		<li> 순서1 순서1 순서1 순서1 순서1 </li>
-		<li> 순서2 순서2 순서2 순서2 순서2 </li>
-		<li> 순서3 순서3 순서3 순서3 순서3 </li>
-		<li> 순서4 순서4 순서4 순서4 순서4 </li>
-	</ul>
-	
-
-	<p> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </p>
-	<p> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </p>
-	<p> 텍스트3 텍스트3 텍스트3 텍스트3 텍스트3 </p>
-	<p> 텍스트4 텍스트4 텍스트4 텍스트4 텍스트4 </p>
+	<div>
+		<button id="btn">자바 스크립트 테스트 버튼</button>
+		<p id="display">이름 출력 영역</p>
+	</div>
 
 </body>
 	
-	
+	<script type="text/javascript">
+		var testButton = document.getElementById("btn");
+		//console.log(testButton);
+		var testArea = document.getElementById("display")
+		console.log(testArea);
+		
+		//버튼을 클릭할때(이벤트)
+		testButton.onclick = function(){
+			//console.log("버튼 클릭");	//sysout 찍어서 확인하는 것처럼 확인할것. 
+			testArea.innerHTML= "<h2>홍길동</h2>";
+		};
+	</script> 
 
 
 </html>
