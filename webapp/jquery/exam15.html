@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -14,8 +14,39 @@
 		<li><strong>네번째 아이템입니다.</strong></li>
 		
 	</ul>
-	<input id="btn" type="button" VALUE="li요소추가" />
+	<button id="btn" type="button" VALUE="">li 추가</button>
 </body>
 
+	<script type="text/javascript">
+		//li추가 버튼 클릭했을때
+		$("#btn").on("click", function(){
+			console.log("li추가 버튼클릭")	
+			
+			$("ul").append("<li id = 'five'>다섯번째 아이템입니다.</li>");	//append는 기본적으로 html 받을 수 있어서 태그 사용 가능
+			$("ul").append("<li id = 'six'>여섯번째 아이템입니다.</li>");
+			$("ul").append("<li id = 'seven'>일곱번째 아이템입니다.</li>");
+		});
+		
+		/*
+		안되는경우
+		$("li").on("click", function(){	//append로 추가된 애들은 인식하지 못함. 그래서 그렇게 만들어야됨. -> (공통이되는 부모한테 이벤트를 잡아버린다.)
+			console.log("li태그 클릭")	
+			var $this = $(this);
+			console.log($this)	
+		})
+		*/
+		
+		//공통이되는 부모한테 이벤트 잡고 그 밑에 자식한테 일시킨다.
+		$("ul").on("click", "li", function(){ //부모인 ul밑에 li한테 시켜라.
+			console.log("li 클릭")	//사실 ul누른거임
+			var $this = $(this);
+			console.log($this);
+			
+			
+		});
+		
+		
+		
+	</script>
 
 </html>

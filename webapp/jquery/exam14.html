@@ -32,15 +32,29 @@
 		*/
 		
 		$("li").on("click", function(){
+			/*
 			console.log("li 버튼클릭");
 			
-			var tag = $(this);	//li중 클릭한 부분만 인식함 -> 위에 p태그는 인식하지 못함
-			console.log(tag);
+			var $that = $(this);	//li중 클릭한 부분만 인식함 -> 위에 p태그는 인식하지 못함	관례적으로 변수명은 $this나 $that쓰기도 함	
+						//현재 이벤트는 click이므로 클릭만 적용됨.
+			console.log($that);
 			
-			$("li").html("최원호");
+			$that.html("<strong>최원호</strong>");
+			*/
+			
+									
+			$(this).text("홍길동");	//클릭시 텍스트 바꿈
+			/*
+			var str = $(this).attr("id");	
+			console.log(str);
+			*/
+			
 		});
 		
-		
+		$("li").on("dblclick", function(){
+			var str = $(this).attr("class");
+			console.log(str);
+		});
 	
 	</script>
 
