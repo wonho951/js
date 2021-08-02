@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -19,5 +19,17 @@
 </body>
 	
 
+	<script type="text/javascript">
+	
+		//클래스를 css 변환할때. -> 클래스는 .asdf이런식으로 쓴다. .을 붙여야함
+		$(".red").css("color", "red");
+		
+		$(".blue").css("color", "blue");
+		
+		$(".green").css("color", "green");
+		
+		//두개의 클래스를 한번에 변환 할때
+		$(".red, .green").css("color", "red");
+	</script>
 
 </html>

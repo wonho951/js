@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -20,7 +20,15 @@
 
 </body>
 	
-	
+	<!-- id사용해서 css변화 -->
+	<script type="text/javascript">
+		$("#second").css("color", "red");
+		
+		$("fourth").css("color", "blue");
+		
+		//first가 두개이기 때문에 안먹힘 -> 애초에 id가 두개이기 때문에 말이 안됨
+		$("first").css("color", "green");
+	</script>
 
 
 </html>
