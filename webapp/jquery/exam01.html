@@ -2,15 +2,38 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
 
+   <div>
+      <button id="btn">자바스크립트 테스트 버튼</button>
+      <p id="display">이름 출력영역</p>
+   </div>
 
 
 </body>
 
-
-
+	<script type="text/javascript">
+	   
+	   /*
+	   var testButton = document.getElementById("btn");
+	   var testArea = document.getElementById("display");
+	   
+	   console.log(testArea);
+	
+	
+	   //버튼을 클릭할때
+	   testButton.onclick = function() {
+	      testArea.innerHTML = "<h2>홍길동</h2>"
+	   };
+	   */
+	   
+	   $("#btn").on("click", function(){
+	      $("#display").test.html("홍길동");
+	      
+	   });
+	   
+	</script>
 </html>

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<script type="text/javascript" src="/jquery/jquery/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="/js/assets/js/jquery/jquery-1.12.4.js"></script>
 
 <title>Insert title here</title>
 </head>
@@ -22,5 +22,24 @@
 
 </body>
 
+	<script type="text/javascript">
+		
+		//태그로 찾는법 -> 선택자라고 부름  $() 일케쓰고  .css는 css바꿔주는거	
+		/* 실제로는 이렇게 사용 안하고 밑에꺼만 씀.
+		var liTags = $("li");
+		console.log(liTags);
+		*/
+		$("li").css("color", "#ff0000");	//강제로 css먹임 -> 따로 빼서 안먹이고 여기서 바로 멕임
+		console.log("li");
+		
+		
+		//$("p").css("color", "blue");
+		
+		var tags = $("p");
+		tegs[0].css("color", "#ff0000");
+		
+		
+		
+	</script>
 
 </html>
